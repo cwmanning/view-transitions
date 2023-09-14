@@ -3,19 +3,9 @@ import '~/assets/styles/tailwind.css';
 
 import { I18N } from '~/utils/config';
 
-import CommonMeta from '~/components/common/CommonMeta.astro';
 import Favicons from '~/components/Favicons.astro';
 import CustomStyles from '~/components/CustomStyles.astro';
-import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
-import Metadata from '~/components/common/Metadata.astro';
 
-import type { MetaData as MetaDataType } from '~/types';
-
-export interface Props {
-  metadata?: MetaDataType;
-}
-
-const { metadata = {} } = Astro.props;
 const { language, textDirection } = I18N;
 
 const slides = await Astro.glob('../content/slide/*.md*');
@@ -26,15 +16,12 @@ const slideNames = slides.map((slide) => {
 ---
 
 <!doctype html>
-<html lang={language} dir={textDirection} class="2xl:text-[20px]" transition:animate="fade">
+<html lang={language} dir={textDirection} class="dark text-[22px]" transition:animate="fade">
   <head>
-    <CommonMeta />
     <!-- <ViewTransitions /> -->
     <meta name="view-transition" content="same-origin" />
     <Favicons />
     <CustomStyles />
-    <ApplyColorMode />
-    <Metadata {...metadata} />
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">

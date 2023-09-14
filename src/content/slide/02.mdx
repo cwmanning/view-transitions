@@ -1,9 +1,9 @@
 ---
 title: ''
-layout: '~/layouts/MarkdownLayout.astro'
+layout: '~/layouts/FullScreenLayout.astro'
 ---
 
-import { Image } from 'astro:assets';
-import image from '~/assets/images/vinyl-shop-app.gif';
+import Image from '~/components/Image.astro';
+import app from '~/assets/images/spotify-view-app.png';
 
-<img src={image.src} alt="" />
+<Image src={app.src} />
