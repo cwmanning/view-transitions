@@ -6,6 +6,9 @@ media_folder: 'src/assets/images'
 public_folder: '/_astro'
 
 collections:
+  - name: 'slide'
+    label: 'Slide'
+    folder: 'src/content/slide'
   - name: 'post'
     label: 'Post'
     folder: 'src/content/post'

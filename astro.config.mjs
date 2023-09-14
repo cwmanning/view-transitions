@@ -75,7 +75,7 @@ export default defineConfig({
   ],
 
   markdown: {
-    remarkPlugins: [readingTimeRemarkPlugin],
+    // remarkPlugins: [readingTimeRemarkPlugin],
   },
 
   vite: {
